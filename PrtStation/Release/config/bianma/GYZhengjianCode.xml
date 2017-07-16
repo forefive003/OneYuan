@@ -1,0 +1,20 @@
+<?xml   version="1.0"   encoding="utf-8"?>
+<Code>
+<element code="01" 	name="居民身份证（户口簿）"/>
+<element code="02" 	name="中国人民解放军军官证"/>
+<element code="03" 	name="中国人民武装警察警官证"/>
+<element code="04" 	name="香港特区护照/港澳居民来往内地通行证"/>
+<element code="05" 	name="澳门特区护照/港澳居民来往内地通行证"/>
+<element code="06" 	name="台湾居民来往大陆通行证"/>
+<element code="07" 	name="外国人永久居留证"/>
+<element code="08" 	name="外国人护照"/>
+<element code="09" 	name="残疾人证"/>
+<element code="10" 	name="军烈属证明"/>
+<element code="11" 	name="外国人就业证"/>
+<element code="12" 	name="外国专家证"/>
+<element code="13" 	name="外国人常驻记者证"/>
+<element code="14" 	name="台港澳人员就业证"/>
+<element code="15" 	name="回大陆（内地）定居专家证"/>
+<element code="90" 	name="社会保障卡"/>
+<element code="99" 	name="其他身份证件"/>
+</Code>

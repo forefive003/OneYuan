@@ -1,0 +1,27 @@
+[2017-07-09 13:35:19] [INFO]:get proxy config: process 社会保障卡冠苑制卡工作站.exe 
+[2017-07-09 13:35:19] [DBG]:construct NetAccept on port 33332 
+[2017-07-09 13:35:19] [INFO]:construct ProcMsgServer on port 33332 
+[2017-07-09 13:35:19] [INFO]:listen on port 33332, fd 624 
+[2017-07-09 13:35:19] [DBG]:construct IoJob 
+[2017-07-09 13:35:19] [INFO]:add new listen job, fd 624. 
+[2017-07-09 13:35:19] [INFO]:add timer 
+[2017-07-09 13:35:19] [INFO]:add timer 
+[2017-07-09 13:35:19] [DBG]:construct NetAccept on port 22223 
+[2017-07-09 13:35:19] [INFO]:construct LocalServer on port 22223 
+[2017-07-09 13:35:19] [INFO]:listen on port 22223, fd 636 
+[2017-07-09 13:35:19] [DBG]:construct IoJob 
+[2017-07-09 13:35:19] [INFO]:add new listen job, fd 636. 
+[2017-07-09 13:35:19] [INFO]:add timer 
+[2017-07-09 13:35:19] [INFO]:work thread[0] started. 
+[2017-07-09 13:35:19] [INFO]:start proxy success. 
+[2017-07-09 13:35:20] [INFO]:add proxy process: 社会保障卡冠苑制卡工作站.exe:10308 
+[2017-07-09 13:35:21] [INFO]:LoadLibrary return 1630535680 
+[2017-07-09 13:35:21] [INFO]:load success: 社会保障卡冠苑制卡工作站.exe:10308 
+[2017-07-09 13:35:21] [DBG]:accept new obj on port 33332: 0x7f000001/56591, fd 788 
+[2017-07-09 13:35:21] [INFO]:recv msg, type REG-REQ 
+[2017-07-09 13:35:21] [INFO]:set proxy process to registered: 社会保障卡冠苑制卡工作站.exe:10308 
+[2017-07-09 13:35:36] [INFO]:proxy process: 社会保障卡冠苑制卡工作站.exe:10308 not exist, del it 
+[2017-07-09 13:35:38] [INFO]:del timer 
+[2017-07-09 13:35:38] [INFO]:let loop to exit. 
+[2017-07-09 13:35:39] [INFO]:work thread[0 exited. 
+[2017-07-09 13:35:39] [INFO]:all loop exit succ. 

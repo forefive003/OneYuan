@@ -1,0 +1,33 @@
+<?xml   version="1.0"   encoding="utf-8"?>
+<dataformat>
+<element name="数据来源" 	positonInIc="0000000100" isSendToIc="1" isPrint="1" printName="发卡地" required="1" type="an" minlen="6" maxlen="6" defaultVal=""/>
+
+<element name="医保参保地" 	positonInIc="DF04EF0584" isSendToIc="1" isPrint="0" printName="" required="0" type="cn" minlen="3" maxlen="3" defaultVal=""/>
+
+<element name="卡识别码" 	positonInIc="SSSEEF0501" isSendToIc="1" isPrint="0" printName="" required="0" type="cn" minlen="0" maxlen="16" defaultVal=""/>
+<element name="卡的类别" 	positonInIc="SSSEEF0502" isSendToIc="1" isPrint="0" printName="" required="1" type="an" minlen="1" maxlen="1" defaultVal=""/>
+<element name="规范版本" 	positonInIc="SSSEEF0503" isSendToIc="1" isPrint="0" printName="" required="1" type="an" minlen="3" maxlen="4" defaultVal=""/>
+<element name="初始化机构编号" 	positonInIc="SSSEEF0504" isSendToIc="1" isPrint="0" printName="" required="1" type="cn" minlen="12" maxlen="12" defaultVal=""/>
+<element name="发卡日期" 		positonInIc="SSSEEF0505" isSendToIc="1" isPrint="1" printName="发卡日期" required="1" type="cn" minlen="4" maxlen="4" defaultVal=""/>
+<element name="卡有效期" 		positonInIc="SSSEEF0506" isSendToIc="1" isPrint="0" printName="" required="1" type="cn" minlen="4" maxlen="4" defaultVal=""/>
+<element name="卡号" 			positonInIc="SSSEEF0507" isSendToIc="1" isPrint="1" printName="卡号" required="1" type="an" minlen="9" maxlen="9" defaultVal=""/>
+
+<element name="社会保障号码" 	positonInIc="SSSEEF0608" isSendToIc="1" isPrint="1" printName="社会保障号码" required="1" type="an" minlen="18" maxlen="18" defaultVal=""/>
+<element name="姓名" 			positonInIc="SSSEEF0609" isSendToIc="1" isPrint="1" printName="姓名" required="1" type="an" minlen="1" maxlen="30" defaultVal=""/>
+<element name="姓名扩展" 		positonInIc="SSSEEF064E" isSendToIc="1" isPrint="0" printName="" required="0" type="an" minlen="1" maxlen="20" defaultVal=""/>
+<element name="性别" 			positonInIc="SSSEEF060A" isSendToIc="1" isPrint="1" printName="性别" required="1" type="an" minlen="1" maxlen="1" defaultVal=""/>
+<element name="民族" 			positonInIc="SSSEEF060B" isSendToIc="1" isPrint="0" printName="" required="1" type="cn" minlen="1" maxlen="1" defaultVal=""/>
+<element name="出生地" 			positonInIc="SSSEEF060C" isSendToIc="1" isPrint="0" printName="" required="0" type="cn" minlen="3" maxlen="3" defaultVal=""/>
+<element name="出生日期" 		positonInIc="SSSEEF060D" isSendToIc="1" isPrint="0" printName="" required="1" type="cn" minlen="4" maxlen="4" defaultVal=""/>
+<element name="银行卡号" 		positonInIc="0000000A00" isSendToIc="1" isPrint="0" printName="" required="0" type="an" minlen="19" maxlen="19" defaultVal=""/>
+
+<element name="户口所在地地址" 			positonInIc="DF01EF0521" isSendToIc="1" isPrint="0" printName="" required="0" type="an" minlen="1" maxlen="80" defaultVal=""/>
+<element name="户口所在地行政区划代码" positonInIc="DF01EF050E" isSendToIc="1" isPrint="0" printName="" required="0" type="cn" minlen="3" maxlen="3" defaultVal=""/>
+
+<element name="常住所在地地址" 			positonInIc="DF01EF0623" isSendToIc="1" isPrint="0" printName="" required="0" type="an" minlen="1" maxlen="80" defaultVal=""/>
+<element name="联系电话" 			positonInIc="DF01EF0628" isSendToIc="1" isPrint="0" printName="" required="0" type="an" minlen="1" maxlen="15" defaultVal=""/>
+<element name="现从事职业" 			positonInIc="DF02EF063A" isSendToIc="1" isPrint="0" printName="" required="0" type="an" minlen="1" maxlen="7" defaultVal=""/>
+
+<element name="国籍" 			positonInIc="DF01EF0A37" isSendToIc="1" isPrint="0" printName="" required="0" type="an" minlen="3" maxlen="3" defaultVal=""/>
+<element name="照片" 			positonInIc="" isSendToIc="0" isPrint="1" printName="" required="1" type="an" minlen="1" maxlen="1000000" defaultVal=""/>
+</dataformat>

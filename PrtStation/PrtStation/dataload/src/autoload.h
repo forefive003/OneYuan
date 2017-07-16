@@ -1,0 +1,32 @@
+#pragma once
+
+
+typedef enum
+{
+	ELM_IDTYPE = 0,
+	ELM_IDNUM = 1,
+	ELM_EXPIRE_TIME = 2,
+	ELM_SHEBAOHAO = 3,
+	ELM_NAME = 4,
+	ELM_SEX = 5,
+	ELM_MINZU = 6,
+	ELM_BIRTHDAY = 7,
+	ELM_ZHUSUO_YOUBIAN = 8,
+	ELM_JOB = 9,
+	ELM_PHONE = 10,
+	ELM_STABLE_PHONE = 11,
+	ELM_SHEBAO_PLACE = 12,
+	ELM_BANK_CODE = 13,
+	ELM_BANK_PLACE = 14,
+	ELM_CHANGZHU_PLACE = 15,
+	ELM_FUKOU_PLACE = 16,
+	ELM_XINZ_QH = 17,
+
+
+	ELM_MAX = 256 /*中间留一些，方便以后扩展，比如用户想在excel里面多加几个字段*/
+}ELM_TYPE_E;
+
+
+
+#define MAX_FIELD_NAME 64
+#define MAX_FIELD_VALUE_LEN 512

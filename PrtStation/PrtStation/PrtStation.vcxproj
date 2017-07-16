@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1B041180-B987-47C2-9BA2-CD480E4390A1}</ProjectGuid>
+    <RootNamespace>PrtStation</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(ProjectDir)\src\lib;$(ProjectDir)\src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\lib;C:\Program Files\Common Files\MSSoapNew;$(LibraryPath)</LibraryPath>
+    <ReferencePath>C:\Program Files\Common Files\MSSoapNew;$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir);$(ProjectDir)\lib\cximage\cximage;$(ProjectDir)\lib\netetp;$(ProjectDir)\src;$(ProjectDir)\dataload\src;$(ProjectDir)\dataload\officeApi;$(ProjectDir)\dataload;$(ProjectDir)\dataload\dialog;$(ProjectDir)\tookkit;$(ProjectDir)\maindialog;$(ProjectDir)\config;$(IncludePath)</IncludePath>
+    <GenerateManifest>false</GenerateManifest>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <TargetName>社会保障卡冠苑制卡工作站</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/D "_CRT_SECURE_NO_DEPRECATE" /EHs %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>netetp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;ETP_USE_LIB;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/D "_CRT_SECURE_NO_WARNINGS" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWS,"5.01" %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="C:\Users\abcht\Desktop\119453.png" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\beijing.bmp" />
+    <None Include="res\bitmap1.bmp" />
+    <None Include="res\bitmap2.bmp" />
+    <None Include="res\bitmap4.bmp" />
+    <None Include="res\PrtStation.ico" />
+    <None Include="res\PrtStation.rc2" />
+    <None Include="res\tubiao.ico" />
+    <None Include="res\tubiao1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config\icdataFormat.h" />
+    <ClInclude Include="config\placeCode.h" />
+    <ClInclude Include="config\printerConfig.h" />
+    <ClInclude Include="config\PrtConfig.h" />
+    <ClInclude Include="config\regConfig.h" />
+    <ClInclude Include="config\stationConfig.h" />
+    <ClInclude Include="config\tempConfig.h" />
+    <ClInclude Include="dataload\src\autoload.h" />
+    <ClInclude Include="dataload\src\BrowserOper.h" />
+    <ClInclude Include="dataload\officeApi\CApplication.h" />
+    <ClInclude Include="dataload\officeApi\CFont0.h" />
+    <ClInclude Include="dataload\officeApi\CRange.h" />
+    <ClInclude Include="dataload\officeApi\CWorkbook.h" />
+    <ClInclude Include="dataload\officeApi\CWorkbooks.h" />
+    <ClInclude Include="dataload\officeApi\CWorksheet.h" />
+    <ClInclude Include="dataload\officeApi\CWorksheets.h" />
+    <ClInclude Include="dataload\dialog\ExcelLoadDlg.h" />
+    <ClInclude Include="dataload\src\ExcelOper.h" />
+    <ClInclude Include="dataload\dialog\FromInfoDlg.h" />
+    <ClInclude Include="tookkit\SplashCtrl.h" />
+    <ClInclude Include="src\base64.h" />
+    <ClInclude Include="src\PrtTaskHdl.h" />
+    <ClInclude Include="src\lib\src\list.h" />
+    <ClInclude Include="src\photoConvert.h" />
+    <ClInclude Include="maindialog\PrinterRegDlg.h" />
+    <ClInclude Include="maindialog\PrintInfoDbg.h" />
+    <ClInclude Include="maindialog\PrintParamDlg.h" />
+    <ClInclude Include="maindialog\CardParamDlg.h" />
+    <ClInclude Include="src\lib\commontype.h" />
+    <ClInclude Include="src\prtCommon.h" />
+    <ClInclude Include="src\PrtService.h" />
+    <ClInclude Include="PrtStation.h" />
+    <ClInclude Include="PrtStationDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="src\lib\etpLib.h" />
+    <ClInclude Include="src\prtGlobal.h" />
+    <ClInclude Include="src\serverComm.h" />
+    <ClInclude Include="src\printComm.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="tookkit\XPButton.h" />
+    <ClInclude Include="tookkit\XPEdit.h" />
+    <ClInclude Include="tookkit\XPListCtrl.h" />
+    <ClInclude Include="tookkit\XPTipDlg.h" />
+    <ClInclude Include="maindialog\UserInfoDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="config\icdataFormat.cpp" />
+    <ClCompile Include="config\placeCode.cpp" />
+    <ClCompile Include="config\printerConfig.cpp" />
+    <ClCompile Include="config\PrtConfig.cpp" />
+    <ClCompile Include="config\regConfig.cpp" />
+    <ClCompile Include="config\stationConfig.cpp" />
+    <ClCompile Include="config\tempConfig.cpp" />
+    <ClCompile Include="dataload\src\BrowserOper.cpp" />
+    <ClCompile Include="dataload\dialog\ExcelLoadDlg.cpp" />
+    <ClCompile Include="dataload\src\ExcelOper.cpp" />
+    <ClCompile Include="dataload\dialog\FromInfoDlg.cpp" />
+    <ClCompile Include="tookkit\SplashCtrl.cpp" />
+    <ClCompile Include="src\base64.cpp" />
+    <ClCompile Include="src\PrtTaskHdl.cpp" />
+    <ClCompile Include="src\photoConvert.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="maindialog\PrinterRegDlg.cpp" />
+    <ClCompile Include="maindialog\PrintInfoDbg.cpp" />
+    <ClCompile Include="maindialog\PrintParamDlg.cpp" />
+    <ClCompile Include="maindialog\CardParamDlg.cpp" />
+    <ClCompile Include="src\PrtService.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PrtStation.cpp" />
+    <ClCompile Include="PrtStationDlg.cpp" />
+    <ClCompile Include="src\prtGlobal.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\serverComm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\printComm.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\writeIcTest.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="tookkit\XPButton.cpp" />
+    <ClCompile Include="tookkit\XPEdit.cpp" />
+    <ClCompile Include="tookkit\XPListCtrl.cpp" />
+    <ClCompile Include="tookkit\XPTipDlg.cpp" />
+    <ClCompile Include="maindialog\UserInfoDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PrtStation.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Release\test\splash.bmp" />
+    <Image Include="..\Release\test\二维码.bmp" />
+    <Image Include="res\icon2.ico" />
+    <Image Include="res\tubiao2.ico" />
+    <Image Include="res\tubiao2.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="PrtStation.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

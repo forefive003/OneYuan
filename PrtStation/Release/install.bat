@@ -1,0 +1,11 @@
+taskkill /f /im Éç±£ÖÆ¿¨*
+xcopy /y "%~dp0\lib\netetp.dll"  "%systemroot%"
+xcopy /y "%~dp0\lib\HD300_V1.dll"  "%systemroot%"
+xcopy /y "%~dp0\lib\PavoApi.dll"  "%systemroot%"
+xcopy /y "%~dp0\lib\msvcp120.dll"  "%systemroot%"
+xcopy /y "%~dp0\lib\msvcr120.dll"  "%systemroot%"
+RegSvr32 /s "%~dp0\lib\soap\MSSOAP30.dll"
+RegSvr32 /s "%~dp0\lib\soap\Resources\1033\MSSOAPR3.dll"
+RegSvr32 /s "%~dp0\lib\soap\WISC30.dll"
+RegSvr32 /s "%~dp0\lib\soap\msxml4.dll"
+RegSvr32 /s "%~dp0\lib\soap\FargoPrinterSDK.dll"

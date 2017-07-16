@@ -1,0 +1,22 @@
+<?xml   version="1.0"   encoding="utf-8"?>
+<autoField>
+<title webtitle="四川省社会保障卡管理信息系统" 	formtitle=""/>
+<field name="证件类型" 	formtype="text" formname="dto['aac058_desc']" hashiden="1" hidenformtype="hidden" hidenformname="dto['aac058']"/>
+<field name="身份证号码" 	formtype="text" formname="dto['aac147']" hashiden="0" hidenformtype="" hidenformname=""/>
+<field name="证件到期日期" 	formtype="text" formname="dto['aab099']" hashiden="0" hidenformtype="" hidenformname=""/>
+<field name="社会保障号码" 	formtype="text" formname="dto['aac002']" hashiden="0" hidenformtype="" hidenformname=""/>
+<field name="姓名" 	formtype="text" formname="dto['aac003']" hashiden="0" hidenformtype="" hidenformname=""/>
+<field name="性别" 	formtype="text" formname="dto['aac004_desc']" hashiden="1" hidenformtype="hidden" hidenformname="dto['aac004']"/>
+<field name="民族" 	formtype="text" formname="dto['aac005_desc']" hashiden="1" hidenformtype="hidden" hidenformname="dto['aac005']"/>
+<field name="出生日期" 	formtype="text" formname="dto['aac006']" hashiden="0" hidenformtype="" hidenformname=""/>
+<field name="住所邮编码" 	formtype="text" formname="dto['aae007']" hashiden="0" hidenformtype="" hidenformname=""/>
+<field name="从事职业" 	formtype="text" formname="dto['aca111']" hashiden="0" hidenformtype="" hidenformname=""/>
+<field name="手机号码" 	formtype="text" formname="dto['aac067']" hashiden="0" hidenformtype="" hidenformname=""/>
+<field name="固定号码" 	formtype="text" formname="dto['aae005']" hashiden="0" hidenformtype="" hidenformname=""/>
+<field name="医保参保地" 	formtype="text" formname="dto['aac200_desc']" hashiden="1" hidenformtype="hidden" hidenformname="dto['aac200']"/>
+<field name="银行编号" 	formtype="text" formname="dto['aae008_desc']" hashiden="1" hidenformtype="hidden" hidenformname="dto['aae008']"/>
+<field name="银行网点" 	formtype="text" formname="dto['aff002_desc']" hashiden="1" hidenformtype="hidden" hidenformname="dto['aff002']"/>
+<field name="常住所在地地址" 	formtype="text" formname="dto['aae006']" hashiden="0" hidenformtype="" hidenformname=""/>
+<field name="户口所在地地址" 	formtype="text" formname="dto['aac010']" hashiden="0" hidenformtype="" hidenformname=""/>
+<field name="人员所属行政区划" formtype="text" formname="dto['targetDepart']" hashiden="1" hidenformtype="text" hidenformname="dto['targetDepartId']"/>
+</autoField>
