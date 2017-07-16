@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sun Jul 26 16:07:02 CST 2015
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=D\:\\webservice\\CardPrint\\CardPrint.jar
+manifest.mergeall=true
+manifest.mainclass=com.service.CardPrintImpl
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=

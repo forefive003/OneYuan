@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+
+	<service>
+		<name>CardPrint</name>
+		<serviceClass>com.service.CardPrint</serviceClass>
+		<implementationClass>com.service.CardPrintImpl</implementationClass>
+		<inHandlers>   
+   		<handler handlerClass ="com.verify.AuthenticationHandler" ></handler >   
+   		</inHandlers> 
+		<serviceFactory>jsr181</serviceFactory>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service></beans>

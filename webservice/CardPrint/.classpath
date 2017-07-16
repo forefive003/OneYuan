@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.ws.xfire.MYECLIPSE_XFIRE_CORE"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.ws.xfire.MYECLIPSE_XFIRE_HTTP_CLIENT"/>
+	<classpathentry kind="lib" path="D:/guanyuan/commons-dbcp2-2.1/commons-dbcp2-2.1.jar"/>
+	<classpathentry kind="lib" path="D:/guanyuan/commons-logging-1.2/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/guanyuan/commons-pool2-2.4.1/commons-pool2-2.4.1.jar"/>
+	<classpathentry kind="lib" path="D:/Program Files/Apache Software Foundation/Tomcat 6.0/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="D:/guanyuan/org.codehaus.xfire.eclipse.core_1.0.2.xfire126.jar"/>
+	<classpathentry kind="lib" path="D:/guanyuan/mysql-connector-java-5.1.7/mysql-connector-java-5.1.7-bin.jar"/>
+	<classpathentry kind="lib" path="D:/guanyuan/jdom-2.0.5.jar"/>
+	<classpathentry kind="lib" path="D:/guanyuan/runtime/org.apache.log4j_1.2.13.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

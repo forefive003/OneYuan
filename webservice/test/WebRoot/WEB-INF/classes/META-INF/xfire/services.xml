@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+
+	<service>
+		<name>linda</name>
+		<serviceClass>com.service.Ilinda</serviceClass>
+		<implementationClass>com.service.lindaImpl</implementationClass>
+		<serviceFactory>jsr181</serviceFactory>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service></beans>

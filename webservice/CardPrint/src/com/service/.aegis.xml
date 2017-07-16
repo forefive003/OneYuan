@@ -1,0 +1,17 @@
+<strong><?xml version="1.0" encoding="UTF-8"?>  
+<mappings>  
+    <mapping>  
+       <method name="cardDeviceRegister">  
+           <parameter index="0" mappedName="id" />
+           <parameter index="1" mappedName="workStationIP" />
+           <parameter index="2" mappedName="workStationPort" />
+           <parameter index="3" mappedName="encryptIP" />
+           <parameter index="4" mappedName="encryptPort" />
+           <parameter index="5" mappedName="cardDeviceName" />
+            <parameter index="6" mappedName="encryptIndex" />
+           <parameter index="7" mappedName="isDecrypt" />
+           
+       </method>
+   </mapping>  
+</mappings>
+</strong>

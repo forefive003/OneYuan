@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inputxml>
+    <!--This is my comments-->
+    <isOK>isok</isOK>
+    <world testAttr="attr Value">
+        <subElement a="aValue" x="xValue" y="yValue">textContent</subElement>
+    </world>
+</inputxml>

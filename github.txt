@@ -1,0 +1,51 @@
+一. 创建仓库(repository)
+1. 创建github账号
+2. 创建新的repository
+可以用https和ssh访问
+
+疑问:
+仓库和项目的区别是什么??
+
+二. 提交代码
+1. 本地下载gitshell
+2. 新建或进入源码目录, cd xxx/
+3. git init      生成.git文件
+4. git add .     添加文件到索引库
+5. git commit -m “xxx”   提交索引库到本地版本库中
+
+如果add之后想恢复某个文件到add之前的内容, 用git reset xxx   和git rm -r --cached .有什么区别
+如果add之后又有修改,想恢复到add时的内容, 用git checkout xxx
+
+6. git remote add origin git@github.com:username/respository.git
+在本地建立一个远程主机,名字为origin
+7. git push origin master
+将本地的内容同步到github的master分支上
+
+疑问：
+1. git add 和git commit之后， git reset --hard commit-id没有生效:
+再次git push 仍然是git commit之后的内容,是否需要再git commit一次？？？
+2. 出现respository不存在错误：确实不存在，或删除.git文件重新来
+
+
+三. 建立分支
+git branche xxx
+git checkout xxx 切换到分支
+git push origin xxx 提交到分支
+git merge xxx xxxx 合并分支 ???
+git branch -d xxx 删除分支
+git clone xxx 下载代码
+
+git clone 和 git pull的区别:
+1. git clone是本地没有代码时，全部拉下来,如
+ git clone git@github.com:xxx/xxx.git 默认为拉取master分支
+ 或者拉一个分支
+ git clone -b dev git@github.com:xxx/xxx.git
+2. git pull是本地更新并合并到某个分支
+ 如git pull origin master
+ 相当于 git fetch origin
+ 				git merge master
+ 
+3. git fetch 也需要本地先有代码 
+
+
+多分支同时开发后怎么合并
