@@ -6,7 +6,7 @@
 #include "PrtConfig.h"
 #include "PrtService.h"
 #include "PrtTaskHdl.h"
-
+#include "jiamijiProxy.h"
 
 char g_localModDir[MAX_PATH + 1] = {0};
 
@@ -214,6 +214,7 @@ int prtGlobalInit()
 
 	if (OK != sysConfigInit())
 	{
+		loggger_exit();
 		MessageBox(NULL, "配置初始化失败，请联系管理员检查配置文件!", "错误", MB_OK);
 		return ET_ERROR;
 	}
@@ -224,6 +225,7 @@ int prtGlobalInit()
 	ret = g_prtService->init();
 	if (OK != ret)
 	{
+		loggger_exit();
 		MessageBox(NULL, "服务初始化失败,请确认此客户端是否已运行!", "错误", MB_OK);
 		return ET_ERROR;
 	}
@@ -231,7 +233,18 @@ int prtGlobalInit()
 	ret = g_browserOper.init();
 	if (1 != ret)
 	{
+		loggger_exit();
 		return ET_ERROR;
+	}
+
+	if (g_is_use_proxy)
+	{
+		if (OK != jiamijiProxyInit())
+		{
+			loggger_exit();
+			MessageBox(NULL, "内部代理初始化失败!", "错误", MB_OK);
+			return ET_ERROR;
+		}
 	}
 
 	get_local_ipaddress();
@@ -247,5 +260,12 @@ void prtGlobalFree()
 		g_excelOper = NULL;
 	}
 
+	if (g_is_use_proxy)
+	{
+		jiamijiProxyFree();
+	}
+	
 	g_prtService->cleanup();
+
+	loggger_exit();
 }
