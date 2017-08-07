@@ -207,7 +207,7 @@ int prtGlobalInit()
 	SNPRINTF(g_testUserDir, MAX_PATH, "%s%s", g_localModDir, XPS_USER_PHOTO_FILE);
 
 	loggger_init(g_logDir, "runlog", 1 * 1024, 6, TRUE);
-	logger_set_level(L_INFO);
+	logger_set_level(L_DEBUG);
 	PRT_LOG_INFO("cur dir %s.", g_localModDir);
 
 	g_parentWnd = AfxGetMainWnd()->m_hWnd;

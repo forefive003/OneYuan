@@ -321,7 +321,7 @@ int wsGetTask(int *taskSessionId, char **taskData, int *taskDataLen,
 		// Display the result.
 		if (strncmp((const char*)Reader->RpcResult->text, "no task", strlen("no task")) == 0)
 		{
-			PRT_LOG_DEBUG("no task when get task.");
+			//PRT_LOG_DEBUG("no task when get task.");
 			ret = SERVER_NO_TASK;
 		}
 		else
