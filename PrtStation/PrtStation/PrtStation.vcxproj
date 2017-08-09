@@ -237,8 +237,10 @@
     <Image Include="..\Release\test\splash.bmp" />
     <Image Include="..\Release\test\二维码.bmp" />
     <Image Include="res\icon2.ico" />
+    <Image Include="res\splash.bmp" />
     <Image Include="res\tubiao2.ico" />
     <Image Include="res\tubiao2.png" />
+    <Image Include="res\二维码.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

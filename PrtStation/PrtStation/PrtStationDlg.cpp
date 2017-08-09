@@ -166,7 +166,7 @@ BOOL CPrtStationDlg::OnInitDialog()
 	this->m_splashTimeUp = FALSE;
 	this->m_initializeOk = FALSE;
 	this->m_splashCompleted = FALSE;
-	SetTimer(2, 3000, NULL);
+	SetTimer(2, 6000, NULL);
 
 	LONG lStyle; 
 	lStyle = GetWindowLong(m_listCtrlTask.m_hWnd, GWL_STYLE);//获取当前窗口style 

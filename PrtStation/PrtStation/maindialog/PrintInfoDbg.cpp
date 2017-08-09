@@ -52,6 +52,7 @@ int CPrintInfoDbg::getTestPrintInfo(PRT_INFO_T *cardInfo)
 	CString cardID;
 	CString cardNum;
 	CString cardLaunchTime;
+	CString cardLaunchPlace;
 
 	memset(cardInfo, 0, sizeof(PRT_INFO_T));
 
@@ -86,6 +87,16 @@ int CPrintInfoDbg::getTestPrintInfo(PRT_INFO_T *cardInfo)
 		MessageBox(_T("发卡日期长度太长！！！"), _T("非法参数"));
 		return ET_ERROR;
 	}
+
+	pEdit = (CEdit*)GetDlgItem(IDC_EDIT_LAUNCHPLACE2);
+	pEdit->GetWindowText(cardLaunchPlace);
+	if (cardLaunchPlace.GetLength() > OWNER_TEXT_MAX_LEN)
+	{
+		MessageBox(_T("发卡地长度太长！！！"), _T("非法参数"));
+		return ET_ERROR;
+	}
+
+	
 
 	CFile ImageFile;
 	char * szImageBin = NULL;
@@ -243,13 +254,13 @@ int CPrintInfoDbg::getTestPrintInfo(PRT_INFO_T *cardInfo)
 				if (prtFormat->cardLaunchPlaceAttr.isPrintStatic)
 				{
 					SNPRINTF(cardInfo->cardLaunchPlace, OWNER_TEXT_MAX_LEN,
-															"%s For测试",
-															dataFmt[i].printName);
+						"%s %s",
+						dataFmt[i].printName, cardLaunchPlace);
 				}
 				else
 				{
 					SNPRINTF(cardInfo->cardLaunchPlace, OWNER_TEXT_MAX_LEN,
-															"For测试");
+						"%s", cardLaunchPlace);
 				}
 			}
 		}
@@ -344,6 +355,9 @@ BOOL CPrintInfoDbg::OnInitDialog()
 
 	pEdit = (CEdit*)GetDlgItem(IDC_EDIT_LAUNCHPLACE);//获取相应的编辑框ID
 	pEdit->SetWindowText(_T("2017年7月")); //设置默认显示的内容
+
+	pEdit = (CEdit*)GetDlgItem(IDC_EDIT_LAUNCHPLACE2);//获取相应的编辑框ID
+	pEdit->SetWindowText(_T("四川成都")); //设置默认显示的内容
 
 	//根据路径载入图片
 	HRESULT hResult = m_image.Load(_T(g_testPhotoDir));
