@@ -864,7 +864,15 @@ void PrtTaskHdl::dataExpand(char *outIcStr, int *outIcStrLen,
 	if (printerParam->shebaoSamType == SHEBAO_JIAMI_TYPE_JIAMIJI)
 	{
 		/*加密机类型*/
-		strTmp.Format("%s:%d", "127.0.0.1", g_jiamijiProxyPort);
+		if (g_is_use_proxy)
+		{
+			strTmp.Format("%s:%d", "127.0.0.1", g_jiamijiProxyPort);
+		}
+		else
+		{
+			strTmp.Format("%s:%d", printerParam->jimijiAddrDesc, printerParam->jimijiPort);
+		}
+		
 		strLen = strTmp.GetLength();
 		memcpy(&outIcStr[outLen], strTmp.GetBuffer(0), strLen);
 		outLen += strLen;
