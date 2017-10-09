@@ -29,6 +29,7 @@ CPrintInfoDbg::~CPrintInfoDbg()
 void CPrintInfoDbg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_COMBO_SEX, m_cmb_sex);
 }
 
 
@@ -53,6 +54,7 @@ int CPrintInfoDbg::getTestPrintInfo(PRT_INFO_T *cardInfo)
 	CString cardNum;
 	CString cardLaunchTime;
 	CString cardLaunchPlace;
+	CString sex;
 
 	memset(cardInfo, 0, sizeof(PRT_INFO_T));
 
@@ -96,8 +98,8 @@ int CPrintInfoDbg::getTestPrintInfo(PRT_INFO_T *cardInfo)
 		return ET_ERROR;
 	}
 
+	m_cmb_sex.GetWindowTextA(sex);
 	
-
 	CFile ImageFile;
 	char * szImageBin = NULL;
 	if (0 == ImageFile.Open(g_testPhotoDir, CFile::modeRead))
@@ -226,13 +228,13 @@ int CPrintInfoDbg::getTestPrintInfo(PRT_INFO_T *cardInfo)
 					SNPRINTF(cardInfo->ownerSex, OWNER_TEXT_MAX_LEN,
 															"%s %s",
 															dataFmt[i].printName,
-															"男");
+															sex);
 				}
 				else
 				{
 					SNPRINTF(cardInfo->ownerSex, OWNER_TEXT_MAX_LEN,
 															"%s",
-															"男");
+															sex);
 				}
 			}
 			else if (0 == strncmp(dataFmt[i].attrName, prtFormat->cardLaunchTimeAttr.attrName, ATTR_NAME_MAX_LEN))
@@ -344,6 +346,10 @@ BOOL CPrintInfoDbg::OnInitDialog()
 	CDialogEx::OnInitDialog();
 
 	// TODO:  在此添加额外的初始化
+	m_cmb_sex.InsertString(0, _T("男"));
+	m_cmb_sex.InsertString(1, _T("女"));
+	m_cmb_sex.SetCurSel(0);
+
 	CEdit*  pEdit=(CEdit*)GetDlgItem(IDC_EDIT_NAME);//获取相应的编辑框ID
 	pEdit->SetWindowText(_T("张三")); //设置默认显示的内容
 

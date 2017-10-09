@@ -35,4 +35,5 @@ public:
 	afx_msg void OnBnClickedButPrtIcChk();
 	afx_msg void OnBnClickedButPrtReset();
 	afx_msg void OnBnClickedButPrtClear();
+	CComboBox m_cmb_sex;
 };
