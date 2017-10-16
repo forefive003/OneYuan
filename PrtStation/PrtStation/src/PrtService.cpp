@@ -100,7 +100,7 @@ void PrtService::_printTaskEntity(void* param1, void* param2, void *param3)
 			taskInfo->endByErrors = TRUE;
 			PRT_LOG_ERROR("xps print oper failed, info：%s, return: %s", taskInfo->resultFailStr, taskInfo->resultOkStr);
 			//MessageBox(NULL, _T("打印卡失败！"), _T("错误"), MB_ICONINFORMATION | MB_TASKMODAL | MB_OK);
-			::PostMessage(g_parentWnd, WM_POPUP_WARNING_DLG, WARN_PRINT_FAILED, (LPARAM)taskInfo);
+			::PostMessage(g_parentWnd, WM_POPUP_WARNING_DLG, WARN_PRINT_FAILED, (LPARAM)0);
 		}
 		else
 		{
@@ -119,7 +119,7 @@ void PrtService::_printTaskEntity(void* param1, void* param2, void *param3)
 			PRT_LOG_ERROR("input icdata %s.", taskInfo->outIcStr);
 			//MessageBox(NULL, _T("写卡失败！"), _T("错误"), MB_OK);
 			/*通知弹出打卡对话框*/
-			::PostMessage(g_parentWnd, WM_POPUP_WARNING_DLG, WARN_WRITE_FAILED, (LPARAM)taskInfo);
+			::PostMessage(g_parentWnd, WM_POPUP_WARNING_DLG, WARN_WRITE_FAILED, (LPARAM)0);
 		}
 		else
 		{
@@ -227,7 +227,7 @@ void PrtService::_taskHandle(int sessionId, char *taskData, int taskDataLen, cha
 		taskInfo->endByErrors = TRUE;
 		PRT_LOG_ERROR("parse data failed, send result");
 		//MessageBox(NULL, _T("任务数据解析失败！"), _T("错误"), MB_OK);
-		::PostMessage(g_parentWnd, WM_POPUP_WARNING_DLG, WARN_PARSE_FAILED, (LPARAM)taskInfo);
+		::PostMessage(g_parentWnd, WM_POPUP_WARNING_DLG, WARN_PARSE_FAILED, (LPARAM)0);
 
 		/*向服务器发送结果*/
 		g_taskHdl->sendTaskResult(taskInfo);
