@@ -230,6 +230,7 @@ void PrtService::_taskHandle(int sessionId, char *taskData, int taskDataLen, cha
 		::PostMessage(g_parentWnd, WM_POPUP_WARNING_DLG, WARN_PARSE_FAILED, (LPARAM)0);
 
 		/*向服务器发送结果*/
+		taskInfo->flag = FLAG_SEND_RET;
 		g_taskHdl->sendTaskResult(taskInfo);
 
 		/*这里的任务还没有入队,需要直接释放*/
